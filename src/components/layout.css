@@ -620,3 +620,26 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.header-nav a + a {
+  margin-left: 20px;
+}
+
+.header-locale-selector {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-locale-selector a + a {
+  margin-left: 10px;
+}
+
+.header-locale-selector a {
+  width: 20px;
+  height: 20px;
+}
+
+.header-locale-selector a > svg:hover {
+  transform: scale(1.15);
+  transition: transform 0.25s ease-in;
+}
