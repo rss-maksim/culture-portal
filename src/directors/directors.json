@@ -2,6 +2,7 @@
   "$schema": "./schema.json",
   "directors": [
     {
+      "id": "1",
       "first_name": "Юрий",
       "last_name": "Хащеватский",
       "biography": [
@@ -91,6 +92,7 @@
       ]
     },
     {
+      "id": "2",
       "first_name": "Юрий",
       "last_name": "Тарич",
       "biography": [
@@ -210,6 +212,7 @@
       ]
     },
     {
+      "id": "3",
       "first_name": "Борис",
       "last_name": "Степанов",
       "biography": [
@@ -270,6 +273,7 @@
       ]
     },
     {
+      "id": "4",
       "first_name": "Михаил",
       "last_name": "Пташук",
       "biography": [
@@ -362,6 +366,7 @@
       ]
     },
     {
+      "id": "5",
       "first_name": "Виктор",
       "last_name": "Туров",
       "biography": [
@@ -430,6 +435,7 @@
       ]
     },
     {
+      "id": "6",
       "first_name": "Игорь",
       "last_name": "Добролюбов",
       "biography": [
@@ -485,6 +491,7 @@
       ]
     },
     {
+      "id": "7",
       "first_name": "Олег",
       "last_name": "Белоусов",
       "biography": [
