@@ -1,42 +1,76 @@
 {
   "type": "object",
   "properties": {
-    "first_name": { "type": "string" },
-    "last_name": { "type": "string" },
-    "birthday": { "type": "string", "format": "date" },
-    "death": [
-      { "type": "string", "format": "date" },
-      { "type": "null" }
-    ],
-    "picture": { "type": "string", "format": "uri" },
-    "gallery": { "type": "array", "items": {
-      "type": "string", 
-      "format": "uri"
-    }},
-    "video": {
-      "type": "string",
-      "format": "uri"
-    },
-    "coordinates": {
-      "type": "string"
-    },
-    "biography": {
+    "directors": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "date": { "type": "string" },
-          "description": { "type": "string" }
-        }
-      }
-    },
-    "works": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "date": { "type": "string" },
-          "name": { "type": "string" }
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
+          },
+          "death": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "picture": {
+            "type": "string",
+            "format": "uri"
+          },
+          "gallery": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "video": {
+            "type": "string",
+            "format": "uri"
+          },
+          "coordinates": {
+            "type": "string"
+          },
+          "biography": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "works": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     }
