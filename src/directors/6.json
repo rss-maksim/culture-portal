@@ -1,0 +1,56 @@
+{
+  "$schema": "./schema.json",
+  "first_name": "Игорь",
+  "last_name": "Добролюбов",
+  "biography": [
+    {
+      "date": "1956",
+      "description": "окончил факультет журналистики Белорусского государственного университета"
+    },
+    {
+      "date": "1957",
+      "description": "актёр Белорусского республиканского ТЮЗа"
+    },
+    {
+      "date": "1963",
+      "description": "окончил ВГИК (мастерская Михаила Ромма). Режиссёр киностудии «Беларусьфильм»"
+    },
+    {
+      "date": "1974",
+      "description": "секретарь правления Союза кинематографистов БССР"
+    },
+    {
+      "date": "1993",
+      "description": "профессор Института современных знаний имени А. М. Широкова (Минск)"
+    }
+  ],
+  "birthday": "1993-10-22",
+  "death": "2010-07-19",
+  "coordinates": "53.9006,27.5590",
+  "picture": "https://lh3.googleusercontent.com/proxy/bOUUaYmKgRQdQjp8G7UHWmt3jNe-kLjpMeC62MthTewhy8Y9JouSmDQk5wrc8OoKuVyHRDFyMducWjYlZkS9OB6s_DhVMnNAzIGwYYo8pI42fA",
+  "video": "https://www.youtube.com/watch?v=AjAQO--hLoM&feature=emb_title",
+  "gallery": [
+    "https://img.tyt.by/n/kultura/0f/c/dobrolyubov1.jpg",
+    "https://s1.afisha.ru/mediastorage/d8/b3/663c33eb6f574ec8908c5998b3d8.jpg",
+    "https://www.kinopoisk.ru/images/film_big/596126.jpg"
+  ],
+  "works": [
+    { "date": "1962", "name": "Мост (короткометражный фильм)" },
+    { "date": "1966", "name": "Иду искать" },
+    { "date": "1968", "name": "Иван Макарович" },
+    { "date": "1968", "name": "Шаги по земле" },
+    { "date": "1970", "name": "Счастливый человек" },
+    { "date": "1972", "name": "Улица без конца" },
+    { "date": "1974", "name": "Потому что люблю" },
+    { "date": "1975", "name": "Братушка" },
+    { "date": "1976", "name": "По секрету всему свету" },
+    { "date": "1978", "name": "Расписание на послезавтра" },
+    { "date": "1979", "name": "Удивительные приключения Дениса Кораблёва" },
+    { "date": "1980", "name": "Третьего не дано" },
+    { "date": "1983", "name": "Белые росы" },
+    { "date": "1985", "name": "Мама, я жив" },
+    { "date": "1987", "name": "Осенние сны" },
+    { "date": "1990", "name": "Плач перепёлки (телефильм)" },
+    { "date": "1994", "name": "Эпилог" }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "./schema.json",
+  "first_name": "Борис",
+  "last_name": "Степанов",
+  "biography": [
+    {
+      "date": "1927",
+      "description": "родился в Петропавловске (ныне Казахстан)"
+    },
+    {
+      "date": "1946",
+      "description": "окончил Северо-Казахстанский механический техникум"
+    },
+    {
+      "date": "1956",
+      "description": "по окончании ВГИКа (мастерская Г. В. Александрова) работал на киностудии «Беларусьфильм»."
+    }
+  ],
+  "birthday": "1927-01-31",
+  "death": "1992-11-27",
+  "coordinates": "48.0196,66.9237",
+  "picture": "https://upload.wikimedia.org/wikipedia/ru/6/69/Stepanov_boris_m.jpg",
+  "video": "https://www.youtube.com/watch?v=b8ZPZywb380",
+  "gallery": [
+    "https://lh3.googleusercontent.com/proxy/xZ_sslUM_lwZY5GPNvgjVfGOYInTdD8c6YCkPtYIfiM73Ads_5HLvzufKV5LqyCE_XQkaVyq-3bu5PsPxXseuLhuP1GbMjZm1sdBrh0Fo5FtDGPO-TtxXeVeS8bi",
+    "https://www.postkomsg.com/files/Tarich-03.jpg"
+  ],
+  "works": [
+    { "date": "1957", "name": "Наши соседи (второй режиссёр)" },
+    { "date": "1959", "name": "Белорусские умельцы (документальный)" },
+    { "date": "1961", "name": "Рассказы о юности (к/м новелла «Секретарь укома»)" },
+    { "date": "1963", "name": "Последний хлеб" },
+    { "date": "1965", "name": "Альпийская баллада" },
+    { "date": "1969", "name": "Я, Франциск Скорина…" },
+    { "date": "1971", "name": "Батька" },
+    { "date": "1973", "name": "Облака" },
+    { "date": "1975", "name": "Волчья стая" },
+    { "date": "1977", "name": "Гарантирую жизнь" },
+    { "date": "1980", "name": "Государственная граница. Мы наш, мы новый…" },
+    { "date": "1980", "name": "Государственная граница. Мирное лето 21-го года" },
+    { "date": "1982", "name": "Государственная граница. Восточный рубеж" },
+    { "date": "1984", "name": "Государственная граница. Красный песок" },
+    { "date": "1987", "name": "Государственная граница. За порогом победы" },
+    { "date": "1993", "name": "Аз воздам (совместно с М. Н. Касымовой и Б. К. Шадурским)" }
+  ]
+}
