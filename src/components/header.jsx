@@ -27,22 +27,22 @@ const locales = [
     url: `/${by}`
   }
 ]
-
 const Header = ({ siteTitle }) => {
   const { t, i18n } = useTranslation()
+  const handleChangeLanguage = lang => () => i18n.changeLanguage(lang)
   return (
     <AppBar position="static" color="primary">
       <Toolbar>
         <Typography className="header-nav">
           <Link href="/" color="inherit">
-            Home
+            {t('main')}
           </Link>
           <Link href="/architects" color="inherit">
             {t('architects')}
           </Link>
         </Typography>
         <Box className="header-locale-selector">
-          <LocaleSelector locales={locales} />
+          <LocaleSelector locales={locales} onSwitch={handleChangeLanguage} />
         </Box>
       </Toolbar>
     </AppBar>
