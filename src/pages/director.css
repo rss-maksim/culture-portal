@@ -1,0 +1,16 @@
+.director-card{
+    max-width: 400px;
+    height: 100vh;
+    margin: 10px;
+    position: fixed;
+    left: 20px;
+    top: 70px;
+}
+
+.container {
+    display: flex;
+}
+
+.director-info{
+    margin-left: 400px;
+}

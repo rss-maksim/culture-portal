@@ -1,0 +1,8 @@
+.director-card {
+    max-width: 500px;
+    height: 100vh;
+    position: sticky;
+    top:50px;
+    left:0;
+
+}
