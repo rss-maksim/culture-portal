@@ -1,34 +1,35 @@
-import React from "react";
-import { Link } from "gatsby";
-import Grid from '@material-ui/core/Grid';
+import React from "react"
+import { Link } from "gatsby"
+import Grid from "@material-ui/core/Grid"
+import Paper from '@material-ui/core/Paper';
+import { useMediaQuery } from '@material-ui/core';
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import DirectorCard from "../components/DirectorCard/DirectorCard"
+import TableOfWorks from "../components/TableOfWorks/TableOfWorks"
+import "./director.css"
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import DirectorCard from '../components/DirectorCard/DirectorCard';
-import TableOfWorks from '../components/TableOfWorks/TableOfWorks';
-import './director.css';
-
-const DirectorPage = () => (
-  <Layout>
+const DirectorPage = () => {
+  const match = useMediaQuery('(max-width: 900px)')
+  return (
+    <Layout>
     <SEO title="Film director" />
-    {/* <div className='container'>
-    <div className='director-card'>
-    <DirectorCard  />
-    </div>
-
-    <div className="director-info"> ipsum  </div>
-    </div> */}
-     <Grid container spacing={2} wrap="wrap">
-    <Grid item xs={'auto'} container justify="center">
-      <DirectorCard  />
-    </Grid>
-    <Grid item xs={8} container justify="center"  className='director-info'>
+    
+    <Grid container spacing={2} wrap="wrap" className="director-card">
+      <Grid item xs={match ? 12 : 4} container justify="center">
      
-      <TableOfWorks/>
-    </Grid>
+        <DirectorCard />
+      </Grid>
+      <Grid item xs={match ? 12 : 8} container justify="center" className="director-info">
+        <TableOfWorks />
+        <TableOfWorks />
+      </Grid>
     </Grid>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+  );
+}
+  
 
-export default DirectorPage;
+
+export default DirectorPage

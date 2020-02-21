@@ -7,23 +7,29 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { useMediaQuery } from '@material-ui/core';
+import './DirectorCard.css';
+
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     margin: 10,
-    // position: 'fixed',
-    // left: 20,
-    // top: 70,
+     position:  'fixed',
+     left: 20,
+     top: 70,
     
   },
 });
 
+
+
 export default function DirectorCard() {
   const classes = useStyles();
+  const match = useMediaQuery('(max-width: 900px)')
 
   return (
-    <Card className={classes.root}>
+    <Card className={match ? 'director-card' : classes.root } >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -32,7 +38,7 @@ export default function DirectorCard() {
           image="https://yt3.ggpht.com/a/AGF-l79gh-zsahfnOWMVkxBCG3I1lxq8m3W0SYMe9A=s288-c-k-c0xffffffff-no-rj-mo"
           title="Film director"
         />
-        <CardContent>
+        <CardContent >
           <Typography gutterBottom variant="h5" component="h2">
             Юрий Хащеватский
           </Typography>
@@ -43,10 +49,10 @@ export default function DirectorCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        
-        <Button size="small" >
+      {(1) ? null: <Button size="small" >
           Learn More
-        </Button>
+        </Button>}
+        
       </CardActions>
     </Card>
   );

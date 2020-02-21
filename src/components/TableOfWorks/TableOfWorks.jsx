@@ -40,8 +40,13 @@ const rows = [
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 700,
+    marginTop: 10,
   },
+  tableCell: {
+    flex: 1,
+    align: 'center'
+  },
+  
 });
 
 export default function CustomizedTables() {
@@ -52,7 +57,7 @@ export default function CustomizedTables() {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>№</StyledTableCell>
+            <StyledTableCell align="center">№</StyledTableCell>
             <StyledTableCell align="center">Work</StyledTableCell>
             <StyledTableCell align="center">Year</StyledTableCell>
           </TableRow>
