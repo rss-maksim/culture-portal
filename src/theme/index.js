@@ -1,17 +1,17 @@
-import { red } from '@material-ui/core/colors';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors'
+import { createMuiTheme } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#424242',
+      main: '#424242'
     },
     secondary: {
-      main: 'rgba(255, 255, 255, 0.7)',
+      main: 'rgba(255, 255, 255, 0.7)'
     },
     error: {
-      main: red.A400,
+      main: red.A400
     },
     background: {
       default: '#303030',
@@ -30,7 +30,7 @@ const theme = createMuiTheme({
       selected: 'rgba(255, 255, 255, 0.16)'
     },
     divider: 'rgba(255, 255, 255, 0.12)'
-  },
-});
+  }
+})
 
-export default theme;
+export default theme
