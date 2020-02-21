@@ -23,24 +23,12 @@
         "multiline": true
       }
     ],
-    "trailing-comma": [
-      true,
-      {
-        "multiline": {
-          "objects": "always",
-          "arrays": "always",
-          "functions": "never",
-          "typeLiterals": "ignore"
-        },
-        "esSpecCompliant": true
-      }
-    ],
     "arrow-body-style": [1, "as-needed"],
     "block-spacing": 1,
-    "comma-dangle": [1, "as-needed"],
+    "comma-dangle": ["error", "only-multiline"],
     "curly": [2, "multi-line"],
     "func-call-spacing": [1, "never"],
-    "function-paren-newline": [1, "never"],
+    "function-paren-newline": ["error", "consistent"],
     "no-cond-assign": [1, "always"],
     "no-constant-condition": 1,
     "no-control-regex": 1,
@@ -52,7 +40,7 @@
     "no-empty": 1,
     "no-ex-assign": 1,
     "no-extra-boolean-cast": 1,
-    "no-extra-parens": [1, "all"],
+    "no-extra-parens": [1, "all", { "ignoreJSX": "all" }],
     "no-extra-semi": 1,
     "no-func-assign": 1,
     "no-inner-declarations": [1, "both"],
@@ -153,7 +141,7 @@
         "SwitchCase": 1
       }
     ],
-    "jsx-quotes": [1, "prefer-single", { "avoidEscape": true }],
+    "jsx-quotes": ["error", "prefer-double"],
     "key-spacing": [
       0,
       {
@@ -202,7 +190,7 @@
       }
     ],
     "semi-style": [1, "last"],
-    "semi": [1, "always", { "omitLastInOneLineBlock": true}],
+    "semi": ["error", "never"],
     "keyword-spacing": [
       1,
       {
@@ -211,7 +199,7 @@
       }
     ],
     "space-before-blocks": [1, "always"],
-    "space-before-function-paren": 1,
+    "space-before-function-paren": ["error", "never"],
     "space-in-parens": [1, "never", {}],
     "space-infix-ops": 1,
     "space-unary-ops": [
