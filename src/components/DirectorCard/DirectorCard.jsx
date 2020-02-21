@@ -24,9 +24,9 @@ const useStyles = makeStyles({
 
 
 
-export default function DirectorCard() {
+export default function DirectorCard({directorData}) {
   const classes = useStyles();
-  const match = useMediaQuery('(max-width: 900px)')
+  const match = useMediaQuery('(max-width: 945px)');
 
   return (
     <Card className={match ? 'director-card' : classes.root } >
@@ -34,17 +34,16 @@ export default function DirectorCard() {
         <CardMedia
           component="img"
           alt="Film director"
-         // height="140"
-          image="https://yt3.ggpht.com/a/AGF-l79gh-zsahfnOWMVkxBCG3I1lxq8m3W0SYMe9A=s288-c-k-c0xffffffff-no-rj-mo"
+          image={directorData.picture}
           title="Film director"
         />
         <CardContent >
           <Typography gutterBottom variant="h5" component="h2">
-            Юрий Хащеватский
+            {directorData.last_name + ' ' + directorData.first_name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="div">
-            <p>Дата рождения: 1947-10-18</p>
-            {(1) ? null: <p>Дата смерти: </p>}
+            <p>Дата рождения: {directorData.birthday}</p>
+            {directorData.death && <p>Дата смерти: {directorData.death}</p>}
           </Typography>
         </CardContent>
       </CardActionArea>

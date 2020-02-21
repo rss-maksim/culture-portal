@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import './TableOfWorks.css';
 
 const StyledTableCell = withStyles(theme => ({
   head: {
@@ -30,30 +31,29 @@ function createData(number, work, year) {
   return { number, work, year };
 }
 
-const rows = [
-  createData("1","Эта тихая жизнь в Глубоком (документальный)", "1985"),
-  createData(2, "Возвращение в Хатынь (фильм-спектакль)", "1986"),
-  createData(3, "Взгляни на свой дом (документальный)" , "1986"),
-  createData(4, "Упрямый человек (документальный)", "1987"),
-  createData(5, "Здесь был Крылов (документальный)","1987"),
-];
 
 const useStyles = makeStyles({
   table: {
     marginTop: 10,
+    paddingLeft:10
   },
   tableCell: {
     flex: 1,
-    align: 'center'
+    align: 'center',
+    paddingLeft:10
   },
+  tableRow: {
+    paddingLeft:10
+  }
+ 
   
 });
 
-export default function CustomizedTables() {
+export default function TableOfWorks({work}) {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} className="table">
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -63,13 +63,13 @@ export default function CustomizedTables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <StyledTableRow key={row.number}>
+          {work.map((work, index) => (
+            <StyledTableRow key={index}>
               <StyledTableCell component="th" align="center">
-                {row.number}
+                {index + 1}
               </StyledTableCell>
-              <StyledTableCell align="center">{row.work}</StyledTableCell>
-              <StyledTableCell align="center">{row.year}</StyledTableCell>
+              <StyledTableCell align="center">{work.name}</StyledTableCell>
+              <StyledTableCell align="center">{work.date}</StyledTableCell>
               
             </StyledTableRow>
           ))}
