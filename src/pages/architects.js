@@ -1,16 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import SEO from '../components/seo'
-import App from '../components/app'
-
-const ArchitectsPage = () => (
-  <App>
+const ArchitectsPage = props => (
+  <Layout>
     <SEO title="Architects" />
     <h1>Architects</h1>
     <p>Welcome to Architects page</p>
+    <DirectoryList {...props} />
     <Link to="/">Go back to the homepage</Link>
-  </App>
+  </Layout>
 )
 
 export default ArchitectsPage
