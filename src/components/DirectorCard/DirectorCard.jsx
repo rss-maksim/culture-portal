@@ -12,6 +12,9 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     margin: 10,
+    // position: 'fixed',
+    // left: 20,
+    // top: 70,
     
   },
 });

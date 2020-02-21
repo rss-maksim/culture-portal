@@ -12,5 +12,6 @@
 }
 
 .director-info{
-    margin-left: 400px;
+    min-width: 500px;
+    margin: auto;
 }
