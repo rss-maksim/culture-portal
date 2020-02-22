@@ -49,11 +49,11 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint ./src"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "eslint . --fix",
+      "eslint ./src --fix",
       "git add"
     ]
   },
