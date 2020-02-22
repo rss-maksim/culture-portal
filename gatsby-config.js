@@ -22,21 +22,16 @@ module.exports = {
         }
       }
     },
-<<<<<<< HEAD
-    `gatsby-transformer-json`,
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/directors/`,
-        name: `directors`,
-      },
+        name: 'directors'
+      }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-=======
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
->>>>>>> master
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
