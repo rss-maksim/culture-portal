@@ -3,30 +3,8 @@ import React from 'react'
 import { AppBar, Link, Typography, Toolbar, Box } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 
-import LocaleSelector from './LocaleSelector'
-import { LOCALES } from '../const'
-import enFlag from '../images/flags/uk.svg'
-import ruFlag from '../images/flags/russia.svg'
-import byFlag from '../images/flags/belarus.svg'
+import LocaleSelector, { locales } from './LocaleSelector'
 
-const { en, ru, by } = LOCALES
-const locales = [
-  {
-    name: en,
-    icon: enFlag,
-    url: '/'
-  },
-  {
-    name: ru,
-    icon: ruFlag,
-    url: `/${ru}`
-  },
-  {
-    name: by,
-    icon: byFlag,
-    url: `/${by}`
-  }
-]
 const Header = ({ siteTitle }) => {
   const { t, i18n } = useTranslation()
   const handleChangeLanguage = lang => () => i18n.changeLanguage(lang)
@@ -42,7 +20,11 @@ const Header = ({ siteTitle }) => {
           </Link>
         </Typography>
         <Box className="header-locale-selector">
-          <LocaleSelector locales={locales} onSwitch={handleChangeLanguage} />
+          <LocaleSelector
+            locales={locales}
+            onSwitch={handleChangeLanguage}
+            active={i18n.language}
+          />
         </Box>
       </Toolbar>
     </AppBar>
