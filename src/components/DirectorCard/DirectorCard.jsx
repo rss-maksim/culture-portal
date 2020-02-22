@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useMediaQuery } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
@@ -26,7 +27,7 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-export default function DirectorCard({
+function DirectorCard({
   directorData,
   handleDirectorChange,
   handleLoadImg,
@@ -75,3 +76,17 @@ export default function DirectorCard({
     </Card>
   )
 }
+
+DirectorCard.propTypes = {
+  directorData: PropTypes.object,
+  handleDirectorChange: PropTypes.func.isRequired,
+  handleLoadImg: PropTypes.func.isRequired,
+  loading: PropTypes.bool
+}
+
+DirectorCard.defaultProps = {
+  directorData: {},
+  loading: true
+}
+
+export default DirectorCard
