@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Grid from "@material-ui/core/Grid";
 import { useMediaQuery } from "@material-ui/core";
@@ -11,6 +11,7 @@ import "./director.css";
 
 const DirectorPage = () => {
   const [idOfDirector, setIdOfDirector] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   const match = useMediaQuery("(max-width: 945px)");
   const query = useStaticQuery(graphql`
@@ -37,6 +38,7 @@ const DirectorPage = () => {
   const directorData =
     query.allDirectorsJson.nodes[0].directors[idOfDirector - 1];
   const handleDirectorChange = (next = true) => {
+    setLoading(true);
     const length = query.allDirectorsJson.nodes[0].directors.length;
     if (next) {
       length < idOfDirector + 1
@@ -49,15 +51,21 @@ const DirectorPage = () => {
     }
   };
 
+  const handleLoadImg = () => {
+    setLoading(false);
+  };
+
   return (
     <Layout>
       <SEO title="Film director" />
-
+     
       <Grid container spacing={2} wrap="wrap" className="director-card">
         <Grid item xs={match ? 12 : 4} container justify="center">
           <DirectorCard
             directorData={directorData}
             handleDirectorChange={handleDirectorChange}
+            handleLoadImg={handleLoadImg}
+            loading={loading}
           />
         </Grid>
         <Grid
@@ -70,6 +78,7 @@ const DirectorPage = () => {
           <TableOfWorks work={directorData.works} />
         </Grid>
       </Grid>
+    
       <Link to="/">Go back to the homepage</Link>
     </Layout>
   );
