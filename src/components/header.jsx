@@ -1,12 +1,12 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { AppBar, Link, Typography, Toolbar, Box } from "@material-ui/core"
+import PropTypes from 'prop-types'
+import React from 'react'
+import { AppBar, Link, Typography, Toolbar, Box } from '@material-ui/core'
 
-import LocaleSelector from "./LocaleSelector"
+import LocaleSelector from './LocaleSelector'
 import { LOCALES } from '../const'
-import enFlag from "../images/flags/uk.svg";
-import ruFlag from "../images/flags/russia.svg";
-import byFlag from "../images/flags/belarus.svg";
+import enFlag from '../images/flags/uk.svg'
+import ruFlag from '../images/flags/russia.svg'
+import byFlag from '../images/flags/belarus.svg'
 
 const { en, ru, by } = LOCALES
 const locales = [
@@ -26,13 +26,16 @@ const locales = [
     url: `/${by}`
   }
 ]
-
 const Header = ({ siteTitle }) => (
   <AppBar position="static" color="primary">
     <Toolbar>
       <Typography className="header-nav">
-        <Link href="/" color="inherit">Home</Link>
-        <Link href="/architects" color="inherit">Architects</Link>
+        <Link href="/" color="inherit">
+          Home
+        </Link>
+        <Link href="/architects" color="inherit">
+          Architects
+        </Link>
       </Typography>
       <Box className="header-locale-selector">
         <LocaleSelector locales={locales} />
@@ -42,11 +45,11 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: '',
+  siteTitle: ''
 }
 
 export default Header
