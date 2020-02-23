@@ -39,7 +39,7 @@ const DirectorsPage = ({ ...props }) => {
   return (
     <>
       <Layout>
-        <SEO title="Architects" />
+        <SEO title="Directors" />
         <h1>Directors</h1>
         <p>Welcome to Directors page</p>
         <SearchBar sortFunc={filterDirectors} />
