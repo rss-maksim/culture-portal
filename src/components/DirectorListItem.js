@@ -1,3 +1,4 @@
+/* eslint-disable array-bracket-spacing */
 import React from 'react'
 import { Link } from 'gatsby'
 import { ListItem, Box } from '@material-ui/core'
@@ -10,22 +11,11 @@ const useStyles = makeStyles(theme => ({
     ' & a': { width: '100%' }
   }
 }))
-
 const DirectorListItem = ({ directorData }) => {
   const classes = useStyles()
-  const [selectedIndex, setSelectedIndex] = React.useState(1)
 
-  const handleListItemClick = (event, index) => {
-    event.preventDefault()
-    setSelectedIndex(index)
-  }
   return (
-    <ListItem
-      button
-      selected={selectedIndex === 0}
-      onClick={event => handleListItemClick(event, 0)}
-      className={classes.root}
-    >
+    <ListItem button className={classes.root}>
       <Link to={`director/${directorData.id}`}>
         <Box m={0.5} width="100%">
           {directorData.first_name} {directorData.last_name}

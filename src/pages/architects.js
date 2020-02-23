@@ -1,3 +1,4 @@
+import React from 'react'
 import { List } from '@material-ui/core'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
@@ -21,15 +22,17 @@ const DirectorsPage = () => {
   `)
   const [directorsArr] = data.allDirectorsJson.nodes.map(node => node.directors)
   const [searchResults, setSearchResults] = React.useState(directorsArr)
-  const filterDirectors = value => {
-    const filteredDirectorsArr = directorsArr.filter(
+  const getFiltered = value =>
+    directorsArr.filter(
       item =>
         item.first_name
           .toLocaleLowerCase()
           .includes(value.toLocaleLowerCase()) ||
         item.last_name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
     )
-    setSearchResults(filteredDirectorsArr)
+  const filterDirectors = value => {
+    const filtered = getFiltered(value)
+    setSearchResults(filtered)
   }
 
   return (
@@ -51,5 +54,8 @@ const DirectorsPage = () => {
       </Layout>
     </>
   )
+}
+DirectorsPage.defaultProps = {
+  props: {}
 }
 export default DirectorsPage

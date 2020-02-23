@@ -6,7 +6,7 @@ import DirectorListItem from '../components/DirectorListItem'
 import SEO from '../components/seo'
 import SearchBar from '../components/SearchBar'
 
-const DirectorsPage = ({ ...props }) => {
+const DirectorsPage = () => {
   const data = useStaticQuery(graphql`
     {
       allDirectorsJson {
@@ -21,18 +21,16 @@ const DirectorsPage = ({ ...props }) => {
     }
   `)
   const [directorsArr] = data.allDirectorsJson.nodes.map(node => node.directors)
-
+  // eslint-disable-next-line array-bracket-spacing
   const [searchResults, setSearchResults] = React.useState(directorsArr)
-
   const filterDirectors = value => {
-    const filteredDirectorsArr = directorsArr.filter(item => {
-      return (
+    const filteredDirectorsArr = directorsArr.filter(
+      item =>
         item.first_name
           .toLocaleLowerCase()
           .includes(value.toLocaleLowerCase()) ||
         item.last_name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-      )
-    })
+    )
     setSearchResults(filteredDirectorsArr)
   }
 
