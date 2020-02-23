@@ -41,7 +41,7 @@
     "no-ex-assign": 1,
     "no-extra-boolean-cast": 1,
     "no-extra-parens": [1, "all", { "ignoreJSX": "all" }],
-    "no-extra-semi": 1,
+    "no-extra-semi": "error",
     "no-func-assign": 1,
     "no-inner-declarations": [1, "both"],
     "no-invalid-regexp": 1,
@@ -183,13 +183,8 @@
     "padded-blocks": [1, "never"],
     "quotes": [1, "single", "avoid-escape"],
     "quote-props": [1, "as-needed"],
-    "semi-spacing": [
-      1,
-      {
-        "after": true
-      }
-    ],
-    "semi-style": [1, "last"],
+    "semi-spacing": ["error", {"before": false, "after": false}],
+    "semi-style": ["error", "last"],
     "semi": ["error", "never"],
     "keyword-spacing": [
       1,

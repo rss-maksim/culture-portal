@@ -1,0 +1,23 @@
+.locale-selector-wrapper {
+  display: flex;
+
+  a + a {
+    margin-left: 10px;
+  }
+
+  a {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+
+  a.active > svg {
+    box-shadow: 0 0 3px 2px yellow;
+    border-radius: 50%;
+  }
+
+  a > svg:hover {
+    transform: scale(1.15);
+    transition: transform 0.25s ease-in;
+  }
+}
