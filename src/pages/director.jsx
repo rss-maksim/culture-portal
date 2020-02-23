@@ -66,9 +66,8 @@ const DirectorPage = () => {
         : setIdOfDirector(idOfDirector - 1)
     }
   }
-  const handleLoadImg = () => {
-    setLoadingIMG(false)
-  }
+  const handleLoadImg = () => setLoadingIMG(false)
+
   if (!directorData) {
     return (
       <div className={classes.root}>
