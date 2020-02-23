@@ -22,6 +22,14 @@ module.exports = {
         }
       }
     },
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/directors/`,
+        name: 'directors'
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

@@ -1,0 +1,35 @@
+.director-card {
+  width: 290px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+.pos {
+  position: relative;
+  width: 100%;
+}
+
+.imgScale {
+  height: 300px;
+  transition: transform 300ms ease-in;
+}
+
+.imgScale:hover {
+  transform: scale(1.1);
+}
+
+.loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: #ffffff;
+}
+
+.noLoading {
+  display: none;
+}
