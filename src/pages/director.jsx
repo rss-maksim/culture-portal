@@ -9,7 +9,8 @@ import DirectorCard from '../components/DirectorCard/DirectorCard'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TableOfWorks from '../components/TableOfWorks/TableOfWorks'
-import Map from '../components/Map/Map'
+import MapBlock from '../components/MapBlock/MapBlock'
+import { useTranslation } from 'react-i18next'
 import './director.css'
 
 const useStyles = makeStyles(theme => ({
@@ -40,6 +41,7 @@ const DirectorPage = () => {
             picture
             death
             birthday
+            coordinates
             works {
               date
               name
@@ -52,7 +54,7 @@ const DirectorPage = () => {
   useEffect(() => {
     setDirectorData(query.allDirectorsJson.nodes[0].directors[idOfDirector - 1])
   })
-
+  const { i18n } = useTranslation()
   const handleDirectorChange = (next = true) => {
     setLoadingIMG(true)
     const length = query.allDirectorsJson.nodes[0].directors.length
@@ -97,7 +99,11 @@ const DirectorPage = () => {
           className="director-info"
         >
           <TableOfWorks work={directorData.works} />
-          <Map />
+          <MapBlock
+            coordinates={directorData.coordinates.split(',').map(item => +item)}
+            name={directorData.first_name + ' ' + directorData.last_name}
+            currentLang={i18n.language}
+          />
         </Grid>
       </Grid>
 
