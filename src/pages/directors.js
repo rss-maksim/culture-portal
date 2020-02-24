@@ -21,18 +21,17 @@ const DirectorsPage = () => {
     }
   `)
   const [directorsArr] = data.allDirectorsJson.nodes.map(node => node.directors)
+  // eslint-disable-next-line array-bracket-spacing
   const [searchResults, setSearchResults] = React.useState(directorsArr)
-  const getFiltered = value =>
-    directorsArr.filter(
+  const filterDirectors = value => {
+    const filteredDirectorsArr = directorsArr.filter(
       item =>
         item.first_name
           .toLocaleLowerCase()
           .includes(value.toLocaleLowerCase()) ||
         item.last_name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
     )
-  const filterDirectors = value => {
-    const filtered = getFiltered(value)
-    setSearchResults(filtered)
+    setSearchResults(filteredDirectorsArr)
   }
 
   return (
@@ -54,8 +53,5 @@ const DirectorsPage = () => {
       </Layout>
     </>
   )
-}
-DirectorsPage.defaultProps = {
-  props: {}
 }
 export default DirectorsPage
