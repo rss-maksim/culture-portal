@@ -20,12 +20,11 @@ const useStyles = makeStyles(theme => ({
     color: 'black'
   }
 }))
-
-export default function VideoPopper({ videoUrl }) {
+const VideoPopper = ({ videoUrl }) => {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const [open, setOpen] = React.useState(false)
   const classes = useStyles()
-  const handleClick = newPlacement => event => {
+  const handleClick = event => {
     setAnchorEl(event.currentTarget)
     setOpen(prev => !prev)
   }
@@ -55,7 +54,7 @@ export default function VideoPopper({ videoUrl }) {
           </Fade>
         )}
       </Popper>
-      <Button onClick={handleClick()}>
+      <Button onClick={handleClick}>
         <YouTubeIcon className={classes.YouTubeIcon} fontSize="large" />
       </Button>
     </div>
@@ -65,3 +64,5 @@ export default function VideoPopper({ videoUrl }) {
 VideoPopper.propTypes = {
   videoUrl: PropTypes.string.isRequired
 }
+
+export default VideoPopper
