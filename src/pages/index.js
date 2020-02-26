@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     textAlign: 'center',
+    margin: 10,
     '& > * + *': {
       marginTop: theme.spacing(2)
     }
@@ -47,8 +48,7 @@ const IndexPage = () => {
   return (
     <App>
       <SEO title="Cultural portal" />
-      <h1>Белорусские режиссеры в кино</h1>
-      <div></div>
+
       <Grid container spacing={2} wrap="wrap">
         <Grid item xs={match ? 12 : 4} container justify="center">
           <DirectorCard
@@ -66,7 +66,12 @@ const IndexPage = () => {
           className="director-info"
         >
           <Paper elevation={3} className={classes.root}>
-            <h1>Hi people</h1>
+            <h1> {t('mainPage.header')}</h1>
+            <div>
+              <p>{t('mainPage.text1')} </p>
+              <p>{t('mainPage.text2')} </p>
+              <p>{t('mainPage.text3')} </p>
+            </div>
           </Paper>
         </Grid>
       </Grid>
