@@ -18,6 +18,9 @@ const Header = ({ siteTitle }) => {
           <Link href="/architects" color="inherit">
             {t('architects')}
           </Link>
+          <Link href="/team" color="inherit">
+            {t('team')}
+          </Link>
         </Typography>
         <Box className="header-locale-selector">
           <LocaleSelector
