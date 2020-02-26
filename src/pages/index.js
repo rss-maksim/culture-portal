@@ -17,17 +17,23 @@ import './director.css'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    textAlign: 'center',
+    textAlign: 'justify',
+    textIndent: 40,
     margin: 10,
+    padding: 10,
     '& > * + *': {
       marginTop: theme.spacing(2)
+    },
+    '& h1': {
+      textAlign: 'center',
+      marginBottom: 50
     }
   }
 }))
 const IndexPage = () => {
   const [loadingIMG, setLoadingIMG] = useState(true)
   const [directorData, setDirectorData] = useState(null)
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
   const query = getQueryDataDirectors()
@@ -48,9 +54,14 @@ const IndexPage = () => {
   return (
     <App>
       <SEO title="Cultural portal" />
-
       <Grid container spacing={2} wrap="wrap">
-        <Grid item xs={match ? 12 : 4} container justify="center">
+        <Grid
+          item
+          xs={match ? 12 : 4}
+          container
+          justify="center"
+          className="main"
+        >
           <DirectorCard
             directorData={directorData}
             handleLoadImg={handleLoadImg}
@@ -66,7 +77,7 @@ const IndexPage = () => {
           className="director-info"
         >
           <Paper elevation={3} className={classes.root}>
-            <h1> {t('mainPage.header')}</h1>
+            <h1>{t('mainPage.header')}</h1>
             <div>
               <p>{t('mainPage.text1')} </p>
               <p>{t('mainPage.text2')} </p>
