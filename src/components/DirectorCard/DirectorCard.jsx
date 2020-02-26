@@ -32,7 +32,8 @@ function DirectorCard({
   directorData,
   handleDirectorChange,
   handleLoadImg,
-  loading
+  loading,
+  isMain
 }) {
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
@@ -58,18 +59,21 @@ function DirectorCard({
           title="Film director"
           className="imgScale"
         />
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {directorData.last_name + ' ' + directorData.first_name}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="div">
-            <p>Дата рождения: {directorData.birthday}</p>
-            {directorData.death && <p>Дата смерти: {directorData.death}</p>}
-          </Typography>
+          {!isMain ? (
+            <Typography variant="body2" color="textSecondary" component="div">
+              <p>Дата рождения: {directorData.birthday}</p>
+              {directorData.death && <p>Дата смерти: {directorData.death}</p>}
+            </Typography>
+          ) : null}
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {directorData.id ? (
+        {!isMain ? (
           <div>
             <Button size="small" onClick={() => handleDirectorChange(false)}>
               Prev
@@ -88,13 +92,15 @@ function DirectorCard({
 
 DirectorCard.propTypes = {
   directorData: PropTypes.object,
-  handleDirectorChange: PropTypes.func.isRequired,
-  handleLoadImg: PropTypes.func.isRequired,
+  handleDirectorChange: PropTypes.func,
+  handleLoadImg: PropTypes.func,
   loading: PropTypes.bool
 }
 
 DirectorCard.defaultProps = {
   directorData: {},
+  handleDirectorChange: null,
+  handleLoadImg: null,
   loading: true
 }
 

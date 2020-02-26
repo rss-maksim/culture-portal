@@ -1,3 +1,4 @@
+/* eslint-disable array-bracket-spacing */
 import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import Grid from '@material-ui/core/Grid'
@@ -23,9 +24,9 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 const DirectorPage = () => {
-  // const [idOfDirector, setIdOfDirector] = useState(1)
-  // const [loadingIMG, setLoadingIMG] = useState(true)
-  // const [directorData, setDirectorData] = useState(null)
+  const [idOfDirector, setIdOfDirector] = useState(1)
+  const [loadingIMG, setLoadingIMG] = useState(true)
+  const [directorData, setDirectorData] = useState(null)
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
   const query = getQueryDataDirectors()
@@ -66,6 +67,7 @@ const DirectorPage = () => {
             handleDirectorChange={handleDirectorChange}
             handleLoadImg={handleLoadImg}
             loading={loadingIMG}
+            isMain={false}
           />
         </Grid>
         <Grid
