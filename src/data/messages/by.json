@@ -2,6 +2,8 @@
   "translation": {
     "architects": "Архітэктары",
     "main": "Галоўная",
-    "team": "Каманда"
+    "team": "Каманда",
+    "team_page/members": "Удзельнікаў",
+    "team_page/subtitle": "Адшукваюцца жывымі ці мёртвымі"
   }
 }

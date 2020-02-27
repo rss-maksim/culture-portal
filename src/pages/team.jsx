@@ -4,8 +4,10 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TeamMember from '../components/TeamMember'
+import { useTranslation } from 'react-i18next'
 
 const TeamPage = () => {
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     {
       allTeamJson {
@@ -33,8 +35,8 @@ const TeamPage = () => {
     <>
       <Layout>
         <SEO title="Members" />
-        <h1>Members</h1>
-        <p>Wanted dead or alive</p>
+        <h1>{t('team_page/members')}</h1>
+        <p>{t('team_page/subtitle')}</p>
         <List style={flexContainer}>
           {members.map((member, index) => (
             <TeamMember member={member} key={index}></TeamMember>
