@@ -1,14 +1,14 @@
 /* eslint-disable array-bracket-spacing */
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { useMediaQuery } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
+
 import DirectorCard from '../components/DirectorCard/DirectorCard'
 import getQueryDataDirectors from '../directors/getQueryDataDirectors'
-import { useTranslation } from 'react-i18next'
-
 import SEO from '../components/seo'
 import App from '../components/app'
 
@@ -37,8 +37,9 @@ const IndexPage = () => {
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
   const query = getQueryDataDirectors()
+  const randomIndex = Math.round(Math.random() * (query.directors.length - 1))
   useEffect(() => {
-    setDirectorData(query.directors[2 - 1])
+    setDirectorData(query.directors[randomIndex])
   })
 
   const handleLoadImg = () => setLoadingIMG(false)

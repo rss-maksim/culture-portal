@@ -35,7 +35,7 @@ const DirectorPage = () => {
   })
   const handleDirectorChange = (next = true) => {
     setLoadingIMG(true)
-    const length = query.directors.length
+    const { length } = query.directors
     if (next) {
       length < idOfDirector + 1
         ? setIdOfDirector(1)
