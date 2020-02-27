@@ -1,6 +1,6 @@
 /* eslint-disable array-bracket-spacing */
 import React, { useState, useEffect } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import Grid from '@material-ui/core/Grid'
 import { useMediaQuery } from '@material-ui/core'
 import CircularProgress from '@material-ui/core/CircularProgress'
@@ -9,7 +9,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DirectorCard from '../components/DirectorCard/DirectorCard'
 import TableOfWorks from '../components/TableOfWorks/TableOfWorks'
-
+import getQueryDataDirectors from '../directors/getQueryDataDirectors'
 import './director.css'
 
 const useStyles = makeStyles(theme => ({
@@ -29,33 +29,13 @@ const DirectorPage = () => {
   const [directorData, setDirectorData] = useState(null)
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
-  const query = useStaticQuery(graphql`
-    query MyQuery {
-      allDirectorsJson(filter: { directors: {} }, skip: 1) {
-        nodes {
-          directors {
-            id
-            last_name
-            first_name
-            picture
-            death
-            birthday
-            works {
-              date
-              name
-            }
-          }
-        }
-      }
-    }
-  `)
+  const query = getQueryDataDirectors()
   useEffect(() => {
-    setDirectorData(query.allDirectorsJson.nodes[0].directors[idOfDirector - 1])
+    setDirectorData(query.directors[idOfDirector - 1])
   })
-
   const handleDirectorChange = (next = true) => {
     setLoadingIMG(true)
-    const length = query.allDirectorsJson.nodes[0].directors.length
+    const { length } = query.directors
     if (next) {
       length < idOfDirector + 1
         ? setIdOfDirector(1)
@@ -87,6 +67,7 @@ const DirectorPage = () => {
             handleDirectorChange={handleDirectorChange}
             handleLoadImg={handleLoadImg}
             loading={loadingIMG}
+            isMain={false}
           />
         </Grid>
         <Grid
