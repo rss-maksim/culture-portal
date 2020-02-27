@@ -7,24 +7,34 @@ import CardMedia from '@material-ui/core/CardMedia'
 import CardActions from '@material-ui/core/CardActions'
 import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import { withStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    'min-width': '300px',
+    width: '250px',
     margin: '20px'
   },
   media: {
     height: 0,
-    paddingTop: '100%' // 16:9
+    paddingTop: '100%'
   }
 }))
+const StyledCardHeader = withStyles({
+  title: {
+    'font-size': '1em'
+  },
+  subheader: {
+    'font-size': '0.8em',
+    'overflow-wrap': 'break-word'
+  }
+})(CardHeader)
 
 export default function TeamMember({ member: { github, name, picture } }) {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
       <CardMedia className={classes.media} image={picture} />
-      <CardHeader title={name} subheader={github} />
+      <StyledCardHeader title={name} subheader={github.split('/').pop()} />
       <CardActions disableSpacing>
         <IconButton href={github}>
           <GitHubIcon />
