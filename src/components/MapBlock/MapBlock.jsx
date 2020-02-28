@@ -2,12 +2,13 @@
 /* eslint-disable array-bracket-spacing */
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { Paper } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { YMaps, Map, Placemark } from 'react-yandex-maps'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
-import classNames from 'classnames'
+import { LOCALES } from '../../const'
 import './MapBlock.css'
 
 const useStyles = makeStyles(theme => ({
@@ -31,10 +32,11 @@ const MapBlock = ({ coordinates, name, currentLang }) => {
     loadingMap,
     noLoadingMap: !loadingMap
   })
+  const { en, ru, by } = LOCALES
   const localMap =
-    (currentLang === 'ru' && 'ru_RU') ||
-    (currentLang === 'en' && 'en_US') ||
-    (currentLang === 'by' && 'be-BY')
+    (currentLang === ru && 'ru_RU') ||
+    (currentLang === en && 'en_US') ||
+    (currentLang === by && 'be-BY')
   return (
     <Paper elevation={3} className={classes.root}>
       <div className={loadClasses}>
