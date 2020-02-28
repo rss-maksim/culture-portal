@@ -1,15 +1,18 @@
 /* eslint-disable array-bracket-spacing */
 import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import Grid from '@material-ui/core/Grid'
 import { useMediaQuery } from '@material-ui/core'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { makeStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import DirectorCard from '../components/DirectorCard/DirectorCard'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import DirectorCard from '../components/DirectorCard/DirectorCard'
 import TableOfWorks from '../components/TableOfWorks/TableOfWorks'
+import MapBlock from '../components/MapBlock/MapBlock'
 import getQueryDataDirectors from '../directors/getQueryDataDirectors'
+
 import './director.css'
 
 const useStyles = makeStyles(theme => ({
@@ -30,9 +33,13 @@ const DirectorPage = () => {
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
   const query = getQueryDataDirectors()
+
   useEffect(() => {
     setDirectorData(query.directors[idOfDirector - 1])
   })
+
+  const { i18n } = useTranslation()
+
   const handleDirectorChange = (next = true) => {
     setLoadingIMG(true)
     const { length } = query.directors
@@ -78,6 +85,11 @@ const DirectorPage = () => {
           className="director-info"
         >
           <TableOfWorks work={directorData.works} />
+          <MapBlock
+            coordinates={directorData.coordinates.split(',').map(item => +item)}
+            name={`${directorData.first_name} ${directorData.last_name}`}
+            currentLang={i18n.language}
+          />
         </Grid>
       </Grid>
 

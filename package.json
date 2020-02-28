@@ -27,7 +27,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-i18next": "^11.3.3",
-    "vertical-timeline-component-for-react": "^1.0.6"
+    "vertical-timeline-component-for-react": "^1.0.6",
+    "react-yandex-maps": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
