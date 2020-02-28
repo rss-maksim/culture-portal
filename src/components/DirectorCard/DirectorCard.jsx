@@ -10,7 +10,10 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined'
+import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined'
 import classNames from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import './DirectorCard.css'
 
@@ -18,7 +21,7 @@ const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    alignItems: 'space-between',
+    alignContent: 'space-between',
     width: 290,
     height: 550,
     margin: 10,
@@ -32,10 +35,12 @@ function DirectorCard({
   directorData,
   handleDirectorChange,
   handleLoadImg,
-  loading
+  loading,
+  isMain
 }) {
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
+  const { t } = useTranslation()
   const loadClasses = classNames({
     loading,
     noLoading: !loading
@@ -50,6 +55,11 @@ function DirectorCard({
         <div className={loadClasses}>
           <CircularProgress color="primary" />{' '}
         </div>
+        {isMain ? (
+          <Typography gutterBottom variant="h5" component="h2" align="center">
+            <p>{t('card.directorOfDay')}</p>
+          </Typography>
+        ) : null}
         <CardMedia
           onLoad={handleLoadImg}
           component="img"
@@ -58,28 +68,37 @@ function DirectorCard({
           title="Film director"
           className="imgScale"
         />
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {directorData.last_name + ' ' + directorData.first_name}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="div">
-            <p>Дата рождения: {directorData.birthday}</p>
-            {directorData.death && <p>Дата смерти: {directorData.death}</p>}
-          </Typography>
+          {!isMain ? (
+            <Typography variant="body2" color="textSecondary" component="div">
+              <p>
+                {t('card.birth')}: {directorData.birthday}
+              </p>
+              {directorData.death && (
+                <p>
+                  {t('card.die')}: {directorData.death}
+                </p>
+              )}
+            </Typography>
+          ) : null}
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {directorData.id ? (
+        {!isMain ? (
           <div>
             <Button size="small" onClick={() => handleDirectorChange(false)}>
-              Prev
+              <ArrowBackOutlinedIcon />
             </Button>
             <Button size="small" onClick={() => handleDirectorChange(true)}>
-              Next
+              <ArrowForwardOutlinedIcon />
             </Button>
           </div>
         ) : (
-          <Button size="small">Learn More</Button>
+          <Button size="small"> {t('card.learn')}</Button>
         )}
       </CardActions>
     </Card>
@@ -88,13 +107,15 @@ function DirectorCard({
 
 DirectorCard.propTypes = {
   directorData: PropTypes.object,
-  handleDirectorChange: PropTypes.func.isRequired,
-  handleLoadImg: PropTypes.func.isRequired,
+  handleDirectorChange: PropTypes.func,
+  handleLoadImg: PropTypes.func,
   loading: PropTypes.bool
 }
 
 DirectorCard.defaultProps = {
   directorData: {},
+  handleDirectorChange: null,
+  handleLoadImg: null,
   loading: true
 }
 

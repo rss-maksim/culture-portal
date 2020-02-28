@@ -1,16 +1,18 @@
 /* eslint-disable array-bracket-spacing */
+import React, { useState, useEffect } from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import Grid from '@material-ui/core/Grid'
 import { useMediaQuery } from '@material-ui/core'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import DirectorCard from '../components/DirectorCard/DirectorCard'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TableOfWorks from '../components/TableOfWorks/TableOfWorks'
 import MapBlock from '../components/MapBlock/MapBlock'
-import { useTranslation } from 'react-i18next'
+import getQueryDataDirectors from '../directors/getQueryDataDirectors'
+
 import './director.css'
 
 const useStyles = makeStyles(theme => ({
@@ -30,34 +32,17 @@ const DirectorPage = () => {
   const [directorData, setDirectorData] = useState(null)
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
-  const query = useStaticQuery(graphql`
-    query MyQuery {
-      allDirectorsJson(filter: { directors: {} }, skip: 1) {
-        nodes {
-          directors {
-            id
-            last_name
-            first_name
-            picture
-            death
-            birthday
-            coordinates
-            works {
-              date
-              name
-            }
-          }
-        }
-      }
-    }
-  `)
+  const query = getQueryDataDirectors()
+
   useEffect(() => {
-    setDirectorData(query.allDirectorsJson.nodes[0].directors[idOfDirector - 1])
+    setDirectorData(query.directors[idOfDirector - 1])
   })
+
   const { i18n } = useTranslation()
+
   const handleDirectorChange = (next = true) => {
     setLoadingIMG(true)
-    const length = query.allDirectorsJson.nodes[0].directors.length
+    const { length } = query.directors
     if (next) {
       length < idOfDirector + 1
         ? setIdOfDirector(1)
@@ -89,6 +74,7 @@ const DirectorPage = () => {
             handleDirectorChange={handleDirectorChange}
             handleLoadImg={handleLoadImg}
             loading={loadingIMG}
+            isMain={false}
           />
         </Grid>
         <Grid

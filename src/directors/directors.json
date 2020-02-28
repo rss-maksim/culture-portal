@@ -1,5 +1,5 @@
 {
-  "$schema": "./schema.json",
+  "$schema": "./schemes/schema.json",
   "directors": [
     {
       "id": "1",
@@ -35,7 +35,7 @@
       "death": null,
       "coordinates": "46.48611,30.72778",
       "picture": "https://yt3.ggpht.com/a/AGF-l79gh-zsahfnOWMVkxBCG3I1lxq8m3W0SYMe9A=s288-c-k-c0xffffffff-no-rj-mo",
-      "video": "https://www.youtube.com/watch?v=R2KvVCN7WJg",
+      "video": "https://www.youtube.com/embed/R2KvVCN7WJg",
       "gallery": [
         "https://st.kp.yandex.net/images/actor_iphone/iphone360_1039782.jpg",
         "https://belprauda.org/wp-content/uploads/2017/10/hashchevatski_11.jpg",
@@ -137,7 +137,7 @@
       "death": "1967-02-21",
       "coordinates": "55.7558,37.6173",
       "picture": "https://upload.wikimedia.org/wikipedia/ru/9/98/Yury_tarich.jpg",
-      "video": "https://www.youtube.com/watch?v=uUp89zNzD3Q",
+      "video": "https://www.youtube.com/embed/uUp89zNzD3Q",
       "gallery": [
         "https://m.io.ua/img_aa/medium/2568/83/25688392.jpg",
         "https://www.postkomsg.com/files/Tarich-03.jpg",
@@ -233,7 +233,7 @@
       "death": "1992-11-27",
       "coordinates": "48.0196,66.9237",
       "picture": "https://upload.wikimedia.org/wikipedia/ru/6/69/Stepanov_boris_m.jpg",
-      "video": "https://www.youtube.com/watch?v=b8ZPZywb380",
+      "video": "https://www.youtube.com/embed/b8ZPZywb380",
       "gallery": [
         "https://lh3.googleusercontent.com/proxy/xZ_sslUM_lwZY5GPNvgjVfGOYInTdD8c6YCkPtYIfiM73Ads_5HLvzufKV5LqyCE_XQkaVyq-3bu5PsPxXseuLhuP1GbMjZm1sdBrh0Fo5FtDGPO-TtxXeVeS8bi",
         "https://www.postkomsg.com/files/Tarich-03.jpg"
@@ -342,7 +342,7 @@
       "death": "2002-04-26",
       "coordinates": "53.9006,27.5590",
       "picture": "https://upload.wikimedia.org/wikipedia/ru/f/f7/M_Ptashuk.jpg",
-      "video": "https://m.youtube.com/watch?v=6dGPfrQ-dEU&itct=CAcQpDAYCyITCLir3oWN-9gCFeYVfgodb9cM5zIGcmVsbWZ1SI7wlLGRhs2Q1wE%3D",
+      "video": "https://www.youtube.com/embed/6dGPfrQ-dEU",
       "gallery": [
         "https://minsknews.by/wp-content/uploads/2018/01/1027183452.jpg",
         "https://www.belta.by/uploads/lotus/news/000027_5B81953D443FA378432582210022B8CE_395624.jpg",
@@ -391,7 +391,7 @@
       "death": "1996-10-31",
       "coordinates": "53.8981, 30.3325",
       "picture": "https://cdn11.img.sputnik.by/images/102577/03/1025770348.jpg",
-      "video": "https://www.youtube.com/watch?v=nelH-PWiZxs",
+      "video": "https://www.youtube.com/embed/nelH-PWiZxs",
       "gallery": [
         "https://cdn12.img.sputnik.by/images/102577/68/1025776887.jpg",
         "https://www.sb.by/upload/medialibrary/2a0/2a0d123460fd08971f089b3d834af509.jpg",
@@ -464,7 +464,7 @@
       "death": "2010-07-19",
       "coordinates": "53.9006,27.5590",
       "picture": "https://lh3.googleusercontent.com/proxy/bOUUaYmKgRQdQjp8G7UHWmt3jNe-kLjpMeC62MthTewhy8Y9JouSmDQk5wrc8OoKuVyHRDFyMducWjYlZkS9OB6s_DhVMnNAzIGwYYo8pI42fA",
-      "video": "https://www.youtube.com/watch?v=AjAQO--hLoM&feature=emb_title",
+      "video": "https://www.youtube.com/embed/AjAQO--hLoM",
       "gallery": [
         "https://img.tyt.by/n/kultura/0f/c/dobrolyubov1.jpg",
         "https://s1.afisha.ru/mediastorage/d8/b3/663c33eb6f574ec8908c5998b3d8.jpg",
@@ -524,7 +524,7 @@
       "death": "2009-03-26",
       "coordinates": "53.9006,27.5590",
       "picture": "https://upload.wikimedia.org/wikipedia/ru/thumb/a/a7/%D0%91%D0%B5%D0%BB%D0%BE%D1%83%D1%81%D0%BE%D0%B2_%D0%9E%D0%BB%D0%B5%D0%B3_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87.jpg/800px-%D0%91%D0%B5%D0%BB%D0%BE%D1%83%D1%81%D0%BE%D0%B2_%D0%9E%D0%BB%D0%B5%D0%B3_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87.jpg",
-      "video": "https://www.youtube.com/watch?v=zuoyzEkrESo",
+      "video": "https://www.youtube.com/embed/zuoyzEkrESo",
       "gallery": [
         "https://j.livelib.ru/auface/208846/o/9ae2/Oleg_Belousov.jpg",
         "https://www.kino-teatr.ru/movie/posters/big/1/106961.jpg",

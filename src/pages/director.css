@@ -16,7 +16,6 @@
   position: relative;
 }
 
-.pos {
-  position: relative;
-  width: 100%;
+.main {
+  order: 2;
 }
