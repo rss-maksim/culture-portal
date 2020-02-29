@@ -1,17 +1,13 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { useTranslation } from 'react-i18next'
 import Worklog from '../components/Worklog'
+import App from '../components/app'
 
 const WorklogPage = () => (
-  <>
-    <Layout>
-      <SEO title="Worklog" />
-      <Worklog />
-    </Layout>
-  </>
+  <App>
+    <SEO title="Worklog" />
+    <Worklog />
+  </App>
 )
 
 export default WorklogPage
