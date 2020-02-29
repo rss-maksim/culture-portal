@@ -13,6 +13,7 @@ import getQueryDataDirectors from '../../directors/getQueryDataDirectors'
 
 import './DirectorPage.css'
 import { extractId } from '../../utils/'
+import Timeline from '../Timeline'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -76,6 +77,7 @@ const DirectorPage = ({ location: { pathname } }) => {
         className="director-info"
       >
         <TableOfWorks work={directorData.works} />
+        <Timeline biography={directorData.biography}></Timeline>
         <MapBlock
           coordinates={directorData.coordinates.split(',').map(item => +item)}
           name={`${directorData.first_name} ${directorData.last_name}`}

@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2)
   },
   YouTubeIcon: {
-    color: 'black'
+    color: 'white'
   }
 }))
 const VideoPopper = ({ videoUrl }) => {
