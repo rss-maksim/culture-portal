@@ -18,7 +18,11 @@ const Header = () => {
           <Link className="nav-item" activeClassName="active" to="/">
             {t('main')}
           </Link>
-          <Link className="nav-item" activeClassName="active" to="/directors">
+          <Link
+            className="nav-item"
+            activeClassName="active"
+            to="/list-directors"
+          >
             {t('directors')}
           </Link>
           <Link className="nav-item" activeClassName="active" to="/team">
