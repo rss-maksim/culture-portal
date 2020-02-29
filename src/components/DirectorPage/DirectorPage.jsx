@@ -81,7 +81,7 @@ const DirectorPage = ({ location: { pathname } }) => {
         <MapBlock
           coordinates={directorData.coordinates.split(',').map(item => +item)}
           name={`${directorData.first_name} ${directorData.last_name}`}
-          currentLang={i18n.language}
+          currentLang={i18n.language.split('-')[0]}
         />
       </Grid>
     </Grid>

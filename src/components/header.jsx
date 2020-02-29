@@ -33,7 +33,7 @@ const Header = () => {
           <LocaleSelector
             locales={locales}
             onSwitch={handleChangeLanguage}
-            active={i18n.language}
+            active={i18n.language.split('-')[0]}
           />
         </Box>
       </Toolbar>
