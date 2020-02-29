@@ -21,6 +21,7 @@ const DirectorsPage = () => {
     }
   `)
   const [directorsArr] = data.allDirectorsJson.nodes.map(node => node.directors)
+  // eslint-disable-next-line array-bracket-spacing
   const [searchResults, setSearchResults] = React.useState(directorsArr)
   const getFiltered = value =>
     directorsArr.filter(

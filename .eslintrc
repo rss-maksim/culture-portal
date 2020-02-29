@@ -1,6 +1,6 @@
 {
   "parserOptions": {
-    "ecmaVersion": 7,
+    "ecmaVersion": 9,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -175,7 +175,7 @@
     "padded-blocks": [1, "never"],
     "quotes": [1, "single", "avoid-escape"],
     "quote-props": [1, "as-needed"],
-    "semi-spacing": ["error", {"before": false, "after": false}],
+    "semi-spacing": ["error", { "before": false, "after": false }],
     "semi-style": ["error", "last"],
     "semi": ["error", "never"],
     "keyword-spacing": [
