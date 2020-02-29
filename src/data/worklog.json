@@ -12,7 +12,7 @@
         "feature": "Setup storybook and add story for language selector"
       },
       {
-        "spent": "5h",
+        "spent": "7h",
         "feature": "Project work log by developers"
       }
     ]
@@ -28,6 +28,10 @@
       {
         "spent": "2h",
         "feature": "Add gallery his/her works on the author page"
+      },
+      {
+        "spent": "2h",
+        "feature": "Add gallery on the author page"
       }
     ]
   },
