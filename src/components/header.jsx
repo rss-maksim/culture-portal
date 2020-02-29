@@ -15,8 +15,8 @@ const Header = ({ siteTitle }) => {
           <Link href="/" color="inherit">
             {t('main')}
           </Link>
-          <Link href="/architects" color="inherit">
-            {t('architects')}
+          <Link href="/directors" color="inherit">
+            {t('directors')}
           </Link>
           <Link href="/team" color="inherit">
             {t('team')}

@@ -110,15 +110,7 @@
     "no-shadow-restricted-names": 1,
     "no-undefined": 1,
     "no-use-before-define": [1, "nofunc"],
-    "array-bracket-spacing": [
-      1,
-      "always",
-      {
-        "singleValue": false,
-        "objectsInArrays": false,
-        "arraysInArrays": false
-      }
-    ],
+    "array-bracket-spacing": ["error", "never"],
     "brace-style": [
       1,
       "1tbs",

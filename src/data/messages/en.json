@@ -1,9 +1,11 @@
 {
   "translation": {
-    "architects": "Architects",
+    "directors": "Directors",
     "main": "Main",
+    "architects": "Architects",
     "team": "Team",
     "team_page/members": "Members",
-    "team_page/subtitle": "Wanted dead or alive"
+    "team_page/subtitle": "Wanted dead or alive",
+    "worklog": "Worklog"
   }
 }
