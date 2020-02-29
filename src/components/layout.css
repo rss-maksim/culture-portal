@@ -630,12 +630,9 @@ pre tt:after {
   text-decoration: none;
 }
 
-.header-nav .nav-item.active {
-  color: #e33371;
-}
-
+.header-nav .nav-item.active,
 .header-nav a:hover {
-  color: #e33371;
+  color: #ffff00;
 }
 
 .header-locale-selector {
