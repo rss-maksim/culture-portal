@@ -8,7 +8,9 @@ import PropTypes from 'prop-types'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    ' & a': { width: '100%' }
+    padding: '0',
+
+    ' & a': { width: '100%', color: '#fff', padding: 6 }
   }
 }))
 const DirectorListItem = ({ directorData }) => {
