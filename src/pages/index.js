@@ -11,7 +11,6 @@ import DirectorCard from '../components/DirectorCard/DirectorCard'
 import getQueryDataDirectors from '../directors/getQueryDataDirectors'
 import SEO from '../components/seo'
 import App from '../components/app'
-import Worklog from '../components/Worklog'
 
 import '../components/DirectorCard/DirectorCard.css'
 
@@ -84,7 +83,6 @@ const IndexPage = () => {
           </Paper>
         </Grid>
       </Grid>
-      <Worklog />
     </App>
   )
 }

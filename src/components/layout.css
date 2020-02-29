@@ -625,6 +625,19 @@ pre tt:after {
   margin-left: 20px;
 }
 
+.header-nav .nav-item {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-nav .nav-item.active {
+  color: #e33371;
+}
+
+.header-nav a:hover {
+  color: #e33371;
+}
+
 .header-locale-selector {
   margin-left: auto;
 }

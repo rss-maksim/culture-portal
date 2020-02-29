@@ -14,7 +14,7 @@ import Header from './header'
 import './layout.css'
 import theme from '../theme'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

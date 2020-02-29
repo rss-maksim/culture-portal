@@ -50,4 +50,5 @@ const DirectorsPage = () => {
     </>
   )
 }
+
 export default DirectorsPage
