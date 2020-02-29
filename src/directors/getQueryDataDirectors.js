@@ -22,6 +22,7 @@ const getQueryDataDirectors = () => {
               date
               name
             }
+            gallery
           }
         }
       }
