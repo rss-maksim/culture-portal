@@ -97,6 +97,7 @@ const Worklog = () => {
         <ExpansionPanel
           expanded={expanded === person.github}
           onChange={handleChange(person.github)}
+          key={person.github}
         >
           <ExpansionPanelSummary
             expandIcon={<ExpandMoreIcon />}
@@ -109,12 +110,13 @@ const Worklog = () => {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container direction="row">
-              {person.log.map(({ feature, spent }) => (
+              {person.log.map(({ feature, spent }, index) => (
                 <Grid
                   container
                   direction="row"
                   justify="center"
                   alignItems="center"
+                  key={index}
                 >
                   <Typography className={classes.spent}>{spent}</Typography>
                   <Typography className={classes.feature}>{feature}</Typography>
