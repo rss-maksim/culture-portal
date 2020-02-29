@@ -12,6 +12,7 @@ const getQueryDataDirectors = () => {
             picture
             death
             birthday
+            coordinates
             works {
               date
               name

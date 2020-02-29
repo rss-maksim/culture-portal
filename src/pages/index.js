@@ -12,7 +12,7 @@ import getQueryDataDirectors from '../directors/getQueryDataDirectors'
 import SEO from '../components/seo'
 import App from '../components/app'
 
-import './director.css'
+import '../components/DirectorCard/DirectorCard.css'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,16 +32,12 @@ const useStyles = makeStyles(theme => ({
 }))
 const IndexPage = () => {
   const [loadingIMG, setLoadingIMG] = useState(true)
-  const [directorData, setDirectorData] = useState(null)
   const { t } = useTranslation()
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
   const query = getQueryDataDirectors()
   const randomIndex = Math.round(Math.random() * (query.directors.length - 1))
-  useEffect(() => {
-    setDirectorData(query.directors[randomIndex])
-  })
-
+  const [directorData] = useState(query.directors[randomIndex])
   const handleLoadImg = () => setLoadingIMG(false)
 
   if (!directorData) {
