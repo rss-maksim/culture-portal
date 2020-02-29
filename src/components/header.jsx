@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { AppBar, Typography, Toolbar, Box } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
-import classnames from 'classnames'
 import { Link } from 'gatsby'
 
 import LocaleSelector, { locales } from './LocaleSelector'
@@ -10,7 +9,6 @@ import LocaleSelector, { locales } from './LocaleSelector'
 const Header = () => {
   const { t, i18n } = useTranslation()
   const handleChangeLanguage = lang => () => i18n.changeLanguage(lang)
-  const page = window.location.pathname
 
   return (
     <AppBar position="static" color="primary">

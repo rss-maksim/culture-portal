@@ -3,7 +3,7 @@ import { Router } from '@reach/router'
 import Layout from '../components/layout'
 
 import DirectorPage from '../components/DirectorPage/DirectorPage'
-const director = props => (
+const PersonPage = props => (
   <Layout>
     <Router>
       <DirectorPage path={props.location.pathname} />
@@ -11,4 +11,4 @@ const director = props => (
   </Layout>
 )
 
-export default director
+export default PersonPage

@@ -16,7 +16,7 @@ const DirectorListItem = ({ directorData }) => {
 
   return (
     <ListItem button className={classes.root}>
-      <Link to={`director/${directorData.id}`}>
+      <Link to={`person/${directorData.id}`}>
         <Box m={0.5} width="100%">
           {directorData.first_name} {directorData.last_name}
         </Box>

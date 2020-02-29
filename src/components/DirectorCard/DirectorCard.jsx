@@ -97,12 +97,12 @@ function DirectorCard({
       <CardActions>
         {!isMain ? (
           <div className={classes.buttons}>
-            <Link to={`director/${handleDirectorChange(false)}`}>
+            <Link to={`person/${handleDirectorChange(false)}`}>
               <Button size="small" onClick={() => handleLoadImg(true)}>
                 <ArrowBackOutlinedIcon />
               </Button>
             </Link>
-            <Link to={`director/${handleDirectorChange(true)}`}>
+            <Link to={`person/${handleDirectorChange(true)}`}>
               <Button size="small" onClick={() => handleLoadImg(true)}>
                 <ArrowForwardOutlinedIcon />
               </Button>
@@ -110,7 +110,7 @@ function DirectorCard({
             <VideoPopper videoUrl={directorData.video}></VideoPopper>
           </div>
         ) : (
-          <Link to={`director/${directorData.id}`}>
+          <Link to={`person/${directorData.id}`}>
             <Button size="small">{t('card.learn')}</Button>
           </Link>
         )}
