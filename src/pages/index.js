@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 const IndexPage = () => {
-  const [loadingIMG, setLoadingIMG] = useState(true)
+  const [loadingIMG, setLoadingIMG] = useState(false)
   const { t } = useTranslation()
   const match = useMediaQuery('(max-width: 945px)')
   const classes = useStyles()
