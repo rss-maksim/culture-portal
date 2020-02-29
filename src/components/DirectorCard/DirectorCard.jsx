@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { useMediaQuery } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -61,7 +62,7 @@ function DirectorCard({
           </Typography>
         ) : null}
         <CardMedia
-          onLoad={handleLoadImg}
+          onLoad={() => handleLoadImg(false)}
           component="img"
           alt="Film director"
           image={directorData.picture}
@@ -90,15 +91,21 @@ function DirectorCard({
       <CardActions>
         {!isMain ? (
           <div>
-            <Button size="small" onClick={() => handleDirectorChange(false)}>
-              <ArrowBackOutlinedIcon />
-            </Button>
-            <Button size="small" onClick={() => handleDirectorChange(true)}>
-              <ArrowForwardOutlinedIcon />
-            </Button>
+            <Link to={`director/${handleDirectorChange(false)}`}>
+              <Button size="small" onClick={() => handleLoadImg(true)}>
+                <ArrowBackOutlinedIcon />
+              </Button>
+            </Link>
+            <Link to={`director/${handleDirectorChange(true)}`}>
+              <Button size="small" onClick={() => handleLoadImg(true)}>
+                <ArrowForwardOutlinedIcon />
+              </Button>
+            </Link>
           </div>
         ) : (
-          <Button size="small"> {t('card.learn')}</Button>
+          <Link to={`director/${directorData.id}`}>
+            <Button size="small">{t('card.learn')}</Button>
+          </Link>
         )}
       </CardActions>
     </Card>
