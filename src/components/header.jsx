@@ -10,7 +10,6 @@ import LocaleSelector, { locales } from './LocaleSelector'
 const Header = () => {
   const { t, i18n } = useTranslation()
   const handleChangeLanguage = lang => () => i18n.changeLanguage(lang)
-  const page = window.location.pathname
 
   return (
     <AppBar position="static" color="primary">
