@@ -13,6 +13,11 @@ const getQueryDataDirectors = () => {
             death
             birthday
             coordinates
+            video
+            biography {
+              date
+              description
+            }
             works {
               date
               name

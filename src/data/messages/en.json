@@ -3,6 +3,18 @@
     "architects": "Architects",
     "main": "Main",
     "team": "Team",
+    "mainPage": {
+      "header": "Belarusian film directors",
+      "text1": "Film screening in Belarus began at the end of the 19th century. At the beginning of the 20th century, 56 private cinemas operated. The first cinema in Minsk was opened in 1900 by entrepreneur Richard Shtremer in the house of Rakovshchik on Zakharyevskaya Street. Initially, it demonstrated transparency, then dumb films. In 1908, Richard himself began to make chronicles and documentaries. Thus, the history of Belarusian cinema has more than a hundred years.",
+      "text2": "A film director is one of the main professions in the art of cinema, a leading participant in the process of creating a film, responsible for the art, play and stage components of the picture.",
+      "text3": "Our portal contains biographies of the most famous directors in the history of Belarusian cinema, who have contributed to cinema."
+    },
+    "card": {
+      "directorOfDay": "Hero of the day",
+      "birth": "Date of Birth",
+      "die": "Date of Death",
+      "learn": "Learn more..."
+    },
     "team_page/members": "Members",
     "team_page/subtitle": "Wanted dead or alive"
   }

@@ -15,6 +15,7 @@ import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined'
 import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined'
 import classNames from 'classnames'
 import { useTranslation } from 'react-i18next'
+import VideoPopper from '../VideoPopper'
 
 import './DirectorCard.css'
 
@@ -29,6 +30,11 @@ const useStyles = makeStyles(() => ({
     position: 'sticky',
     left: 20,
     top: 70
+  },
+  buttons: {
+    display: 'flex',
+    'align-items': 'center',
+    'margin-top': -10
   }
 }))
 
@@ -90,7 +96,7 @@ function DirectorCard({
       </CardActionArea>
       <CardActions>
         {!isMain ? (
-          <div>
+          <div className={classes.buttons}>
             <Link to={`director/${handleDirectorChange(false)}`}>
               <Button size="small" onClick={() => handleLoadImg(true)}>
                 <ArrowBackOutlinedIcon />
@@ -101,6 +107,7 @@ function DirectorCard({
                 <ArrowForwardOutlinedIcon />
               </Button>
             </Link>
+            <VideoPopper videoUrl={directorData.video}></VideoPopper>
           </div>
         ) : (
           <Link to={`director/${directorData.id}`}>
