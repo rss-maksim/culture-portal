@@ -1,14 +1,14 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import Layout from '../components/layout'
-
+import App from './../components/app'
 import DirectorPage from '../components/DirectorPage/DirectorPage'
+
 const director = props => (
-  <Layout>
+  <App>
     <Router>
       <DirectorPage path={props.location.pathname} />
     </Router>
-  </Layout>
+  </App>
 )
 
 export default director

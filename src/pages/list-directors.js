@@ -1,11 +1,11 @@
 import React from 'react'
 import { List } from '@material-ui/core'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
 import DirectorListItem from '../components/DirectorListItem'
 import SEO from '../components/seo'
 import SearchBar from '../components/SearchBar'
 import { makeStyles } from '@material-ui/core/styles'
+import App from './../components/app'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,23 +46,21 @@ const DirectorsPage = () => {
   }
 
   return (
-    <>
-      <Layout>
-        <SEO title="Directors" />
-        <h1>Directors</h1>
-        <p>Welcome to Directors page</p>
-        <SearchBar sortFunc={filterDirectors} />
-        <List className={classes.root}>
-          {searchResults.map((director, index) => (
-            <DirectorListItem
-              directorData={director}
-              key={index}
-            ></DirectorListItem>
-          ))}
-        </List>
-        <Link to="/">Go back to the homepage</Link>
-      </Layout>
-    </>
+    <App>
+      <SEO title="Directors" />
+      <h1>Directors</h1>
+      <p>Welcome to Directors page</p>
+      <SearchBar sortFunc={filterDirectors} />
+      <List className={classes.root}>
+        {searchResults.map((director, index) => (
+          <DirectorListItem
+            directorData={director}
+            key={index}
+          ></DirectorListItem>
+        ))}
+      </List>
+      <Link to="/">Go back to the homepage</Link>
+    </App>
   )
 }
 DirectorsPage.defaultProps = {
