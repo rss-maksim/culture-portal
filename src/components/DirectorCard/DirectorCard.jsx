@@ -16,6 +16,7 @@ import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined'
 import classNames from 'classnames'
 import { useTranslation } from 'react-i18next'
 import VideoPopper from '../VideoPopper'
+import GalleryPopper from '../GalleryPopper'
 
 import './DirectorCard.css'
 
@@ -108,6 +109,7 @@ function DirectorCard({
               </Button>
             </Link>
             <VideoPopper videoUrl={directorData.video}></VideoPopper>
+            <GalleryPopper images={directorData.gallery} />
           </div>
         ) : (
           <Link to={`director/${directorData.id}`}>
