@@ -2,45 +2,54 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { makeStyles } from '@material-ui/core/styles'
-import Popper from '@material-ui/core/Popper'
-import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Fade from '@material-ui/core/Fade'
-import Paper from '@material-ui/core/Paper'
+import { Modal, Backdrop, Fade } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    width: 500
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  typography: {
-    padding: theme.spacing(2)
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(8),
+    minWidth: '50%',
+    '&:focus': {
+      outline: 'none'
+    }
   }
 }))
 const AppPopper = ({ buttonContent, children }) => {
-  const [anchorEl, setAnchorEl] = React.useState(null)
   const [open, setOpen] = React.useState(false)
   const classes = useStyles()
   const handleClick = event => {
-    setAnchorEl(event.currentTarget)
     setOpen(prev => !prev)
+  }
+  const handleClose = () => {
+    setOpen(false)
   }
 
   return (
-    <div>
-      <Popper
+    <div className={classes.root}>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
         open={open}
-        anchorEl={anchorEl}
-        placement="bottom-start"
-        transition
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500
+        }}
       >
-        {({ TransitionProps }) => (
-          <Fade {...TransitionProps} timeout={350}>
-            <Paper className={classes.root}>
-              <Typography className={classes.typography}>{children}</Typography>
-            </Paper>
-          </Fade>
-        )}
-      </Popper>
+        <Fade in={open}>
+          <div className={classes.paper}>{children}</div>
+        </Fade>
+      </Modal>
       <Button onClick={handleClick}>{buttonContent}</Button>
     </div>
   )
