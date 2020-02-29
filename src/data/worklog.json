@@ -1,0 +1,92 @@
+{
+  "rss-maksim": {
+    "github": "rss-maksim",
+    "name": "Maksim Kirylka",
+    "log": [
+      {
+        "spent": "3h",
+        "feature": "Setup material UI. App header and language selector"
+      },
+      {
+        "spent": "3h",
+        "feature": "Setup storybook and add story for language selector"
+      },
+      {
+        "spent": "5h",
+        "feature": "Project work log by developers"
+      }
+    ]
+  },
+  "OrionT": {
+    "github": "OrionT",
+    "name": "Vadzim Sasonkin",
+    "log": [
+      {
+        "spent": "4h",
+        "feature": "i18next localization (3 languages) "
+      },
+      {
+        "spent": "2h",
+        "feature": "Add gallery his/her works on the author page"
+      }
+    ]
+  },
+  "vzanimonets": {
+    "github": "vzanimonets",
+    "name": "Viktar Vzanimonets",
+    "log": [
+      {
+        "spent": "3h",
+        "feature": "Setup code styling"
+      },
+      {
+        "spent": "3h",
+        "feature": "Create authors list page"
+      },
+      {
+        "spent": "2h",
+        "feature": "Search author through authors list"
+      }
+    ]
+  },
+  "spirithntr": {
+    "github": "spirithntr",
+    "name": "Ivan Pastukhov",
+    "log": [
+      {
+        "spent": "5h",
+        "feature": "Add film directors of Belarus"
+      },
+      {
+        "spent": "4h",
+        "feature": "Add timeline on the author page"
+      },
+      {
+        "spent": "3h",
+        "feature": "Add video on the author page"
+      },
+      {
+        "spent": "4h",
+        "feature": "Add team page"
+      }
+    ]
+  },
+  "truhin-andrei": {
+    "github": "truhin-andrei",
+    "name": "Andrei Truhin",
+    "log": [
+      {
+        "spent": "8h",
+        "feature": "Add name, years, picture, list of works on the author page"
+      },
+      {
+        "spent": "4h",
+        "feature": "Add map on the author page"
+      },
+      {
+        "spent": "5h",
+        "feature": "Add author of day and portal description on the main page"
+      }
+    ]
+  }
+}

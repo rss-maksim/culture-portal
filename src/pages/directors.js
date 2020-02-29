@@ -21,7 +21,6 @@ const DirectorsPage = () => {
     }
   `)
   const [directorsArr] = data.allDirectorsJson.nodes.map(node => node.directors)
-  // eslint-disable-next-line array-bracket-spacing
   const [searchResults, setSearchResults] = React.useState(directorsArr)
   const filterDirectors = value => {
     const filteredDirectorsArr = directorsArr.filter(
@@ -43,10 +42,7 @@ const DirectorsPage = () => {
         <SearchBar sortFunc={filterDirectors} />
         <List>
           {searchResults.map((director, index) => (
-            <DirectorListItem
-              directorData={director}
-              key={index}
-            ></DirectorListItem>
+            <DirectorListItem directorData={director} key={index} />
           ))}
         </List>
         <Link to="/">Go back to the homepage</Link>

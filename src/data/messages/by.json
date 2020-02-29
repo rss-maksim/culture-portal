@@ -1,9 +1,11 @@
 {
   "translation": {
-    "architects": "Архітэктары",
+    "directors": "Рэжысёры",
+    "architects": "Рэжысёры",
     "main": "Галоўная",
     "team": "Каманда",
     "team_page/members": "Удзельнікаў",
-    "team_page/subtitle": "Адшукваюцца жывымі ці мёртвымі"
+    "team_page/subtitle": "Адшукваюцца жывымі ці мёртвымі",
+    "worklog": "Журнал працы"
   }
 }

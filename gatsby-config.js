@@ -37,6 +37,13 @@ module.exports = {
         name: 'team'
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: 'worklog'
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

@@ -628,3 +628,11 @@ pre tt:after {
 .header-locale-selector {
   margin-left: auto;
 }
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+}
